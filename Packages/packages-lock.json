@@ -1,5 +1,11 @@
 {
   "dependencies": {
+    "com.2dpack.brackeys": {
+      "version": "file:../Local/com.2dpack.brackeys",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
     "com.gameworkstore.patterns": {
       "version": "https://github.com/GameWorkstore/patterns.git#1.3.4",
       "depth": 0,

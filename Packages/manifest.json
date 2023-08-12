@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.2dpack.brackeys": "file:../Local/com.2dpack.brackeys",
     "com.rfcastle": "file:../Local/com.rfcastle",
     "com.mightyheroesfantasycharacterspack": "file:../Local/com.mightyheroesfantasycharacterspack",
     "com.gameworkstore.patterns": "https://github.com/GameWorkstore/patterns.git#1.3.4",
