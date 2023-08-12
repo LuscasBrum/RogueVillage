@@ -17,20 +17,25 @@ public class CharacterMovement : MonoBehaviour
 
     private void Update()
     {
+        Move();
+
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Attack();
+        }
+    }
+
+    private void Move() 
+    {
         _inputValue = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         bool isWalking = _inputValue.magnitude > 0;
         _animator.SetBool("IsWalking", isWalking);
 
-        if (Input.GetButtonDown("Fire1"))
-        {
-            _animator.SetTrigger("Attack");
-        }
-
-        Move();
+        _rigidbody.velocity = _inputValue * +_moveSpeed;
     }
 
-    private void Move()
+    private void Attack()
     {
-        _rigidbody.velocity = _inputValue * + _moveSpeed;
+        _animator.SetTrigger("Attack");
     }
 }
