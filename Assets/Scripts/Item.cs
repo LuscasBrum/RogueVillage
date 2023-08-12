@@ -19,6 +19,9 @@ namespace RogueStore {
         public int Cost;
 
         public Sprite Preview;
+        public bool IsEven = false;
+        [ConditionalField("IsEven")]
+        public Sprite PreviewEven;
 
         public int ID => IsCustomId ? IdReference.ID : Animator.StringToHash(name);
     }

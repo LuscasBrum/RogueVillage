@@ -5,6 +5,6 @@ namespace RogueStore
     [CreateAssetMenu(fileName = "Database", menuName = "RogueStore/Database")]
     public class ShopDatabase : ScriptableObject
     {
-        Item[] items;
+        public Item[] items;
     }
 }
