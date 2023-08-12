@@ -5,7 +5,7 @@ namespace RogueStore
     public class InventoryService : IService
     {
         public Signal<int> OnCoinAmountUpdated = new Signal<int>();
-        private int _coinAmount = 100;
+        private int _coinAmount = 1000;
 
         public override void Postprocess()
         {

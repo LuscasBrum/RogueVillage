@@ -2,7 +2,6 @@ using GameWorkstore.Patterns;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Networking;
 using UnityEngine.UI;
 
 namespace RogueStore
@@ -19,6 +18,7 @@ namespace RogueStore
         {
             _gameService = ServiceProvider.GetService<GameService>();
             _storeService = ServiceProvider.GetService<StoreService>();
+
             _bntClose.onClick.AddListener(CloseStore);
             _storeItem.Template.gameObject.SetActive(false);
             ItemType[] types = (ItemType[])Enum.GetValues(typeof(ItemType));

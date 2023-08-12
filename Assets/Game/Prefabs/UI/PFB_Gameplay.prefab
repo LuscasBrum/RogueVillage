@@ -191,6 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33a780da095309d4488be738a537740b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _txtCoinAmount: {fileID: 0}
 --- !u!1 &1734200447482662077
 GameObject:
   m_ObjectHideFlags: 0
@@ -257,7 +258,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 100
+  m_text: 1000
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4bd75a234a0380148a263b987a94906e, type: 2}
   m_sharedMaterial: {fileID: 30371679139758155, guid: 4bd75a234a0380148a263b987a94906e, type: 2}
