@@ -5,7 +5,8 @@ namespace RogueStore
     public enum MatchState
     {
         PLAYING = 0,
-        PAUSED = 1
+        PAUSED = 1,
+        SHOPPING = 2,
     }
 
     public class GameService : IService
@@ -18,6 +19,12 @@ namespace RogueStore
 
         public override void Preprocess()
         {
+            MatchState = MatchState.PLAYING;
+        }
+
+        internal void OpenStore()
+        {
+            MatchState = MatchState == MatchState.PLAYING ? MatchState.SHOPPING : MatchState.PLAYING;
         }
     }
 }

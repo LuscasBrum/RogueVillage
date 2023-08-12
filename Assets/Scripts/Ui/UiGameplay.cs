@@ -1,13 +1,14 @@
 using GameWorkstore.Patterns;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace RogueStore
 {
     public class UiGameplay : MonoBehaviour
     {
         private InventoryService _inventoryService;
-        private TextMeshProUGUI _txtCoinAmount;
+        [SerializeField] private TextMeshProUGUI _txtCoinAmount;
 
         private void Awake()
         {

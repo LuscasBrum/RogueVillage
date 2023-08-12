@@ -1,3 +1,4 @@
+using GameWorkstore.Patterns;
 using UnityEngine;
 
 namespace RogueStore
@@ -12,14 +13,23 @@ namespace RogueStore
         private Rigidbody2D _rigidbody;
         private Vector2 _inputValue;
 
+        private GameService _gameService;
+
         private void Awake()
         {
             _rigidbody = GetComponent<Rigidbody2D>();
             _animator = GetComponent<Animator>();
+            _gameService = ServiceProvider.GetService<GameService>();
         }
 
         private void Update()
         {
+            if (_gameService.MatchState != MatchState.PLAYING) 
+            {
+                _animator.SetBool("IsWalking", false);
+                return;
+            }
+
             Move();
 
             if (Input.GetButtonDown("Fire1"))
@@ -40,6 +50,9 @@ namespace RogueStore
             _animator.SetBool("IsWalking", isWalking);
 
             _rigidbody.velocity = _inputValue * +_moveSpeed;
+
+            float targetRotation = _inputValue.x > 0 ? 0 : (_inputValue.x < 0 ? 180 : transform.rotation.eulerAngles.z);
+            transform.rotation = Quaternion.Euler(0, targetRotation, 0);
         }
 
         private void Attack()
