@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.gameworkstore.googleprotobufunity": "https://github.com/GameWorkstore/google-protobuf-unity.git#3.15.2012",
     "com.2dpack.brackeys": "file:../Local/com.2dpack.brackeys",
     "com.rfcastle": "file:../Local/com.rfcastle",
     "com.mightyheroesfantasycharacterspack": "file:../Local/com.mightyheroesfantasycharacterspack",

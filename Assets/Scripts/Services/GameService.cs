@@ -22,7 +22,7 @@ namespace RogueStore
             MatchState = MatchState.PLAYING;
         }
 
-        internal void OpenStore()
+        internal void CallShopping()
         {
             MatchState = MatchState == MatchState.PLAYING ? MatchState.SHOPPING : MatchState.PLAYING;
         }

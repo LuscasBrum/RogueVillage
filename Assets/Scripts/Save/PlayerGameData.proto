@@ -1,0 +1,13 @@
+syntax = "proto3";
+option optimize_for = LITE_RUNTIME;
+option go_package = "example.com;main";
+package RogueStore;
+
+
+
+message PlayerGameData
+{
+   int32 Coins = 1;
+   repeated int32 UnlockedIds = 2;
+   repeated int32 CurrentClothes= 3;
+}

@@ -20,7 +20,7 @@ namespace RogueStore
         public override void Interact()
         {
             _uIStateService.SetState(_storeState);
-            _gameService.OpenStore();
+            _gameService.CallShopping();
         }
     }
 }

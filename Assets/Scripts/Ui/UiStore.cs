@@ -18,15 +18,18 @@ namespace RogueStore
         {
             _gameService = ServiceProvider.GetService<GameService>();
             _storeService = ServiceProvider.GetService<StoreService>();
-
             _bntClose.onClick.AddListener(CloseStore);
+        }
+
+        private void OnEnable()
+        {
             _storeItem.Template.gameObject.SetActive(false);
             ItemType[] types = (ItemType[])Enum.GetValues(typeof(ItemType));
             _storeItem.SetActiveCount(types.Length);
 
             for (int i = 0; i < types.Length; i++)
             {
-                _storeItem[i].Setup(types[i], GetItemsOfType(types[i]));
+                _storeItem[i].Setup(GetItemsOfType(types[i]), i);
             }
         }
 
@@ -47,7 +50,8 @@ namespace RogueStore
 
         private void CloseStore()
         {
-            _gameService.OpenStore();
+            _gameService.CallShopping();
+            _storeService.GetCurrentClothes();
         }
     }
 }

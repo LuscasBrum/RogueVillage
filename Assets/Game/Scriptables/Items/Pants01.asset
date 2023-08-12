@@ -15,7 +15,7 @@ MonoBehaviour:
   IsCustomId: 0
   IdReference: {fileID: 0}
   Type: 5
-  Cost: 10
+  Cost: 56
   Preview: {fileID: 21300000, guid: 40e550cd3b539f14eb98d42b6769b592, type: 3}
   IsEven: 1
   PreviewEven: {fileID: 21300000, guid: 7b78357522a34d64bb8775b962b0deb0, type: 3}
