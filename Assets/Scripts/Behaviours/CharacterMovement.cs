@@ -3,7 +3,6 @@ using UnityEngine;
 
 namespace RogueStore
 {
-
     public class CharacterMovement : MonoBehaviour
     {
         [SerializeField] private float _moveSpeed;

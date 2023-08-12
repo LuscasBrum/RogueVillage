@@ -1,33 +1,32 @@
 using GameWorkstore.Patterns;
-using RogueStore;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UiStore : MonoBehaviour
+namespace RogueStore
 {
-    private GameService _gameService;
-    [SerializeField] private Button _bntClose;
-
-    private void Awake()
+    public class UiStore : MonoBehaviour
     {
-        _gameService = ServiceProvider.GetService<GameService>();
-        _bntClose.onClick.AddListener(CloseStore);
-    }
+        private GameService _gameService;
+        [SerializeField] private Button _bntClose;
 
-    private void OnEnable()
-    {
-    }
+        private void Awake()
+        {
+            _gameService = ServiceProvider.GetService<GameService>();
+            _bntClose.onClick.AddListener(CloseStore);
+        }
 
-    private void OnDisable()
-    {
-    }
+        private void OnEnable()
+        {
+        }
 
-    private void CloseStore()
-    {
-        _gameService.OpenStore();
-    }
+        private void OnDisable()
+        {
+        }
 
+        private void CloseStore()
+        {
+            _gameService.OpenStore();
+        }
+
+    }
 }
